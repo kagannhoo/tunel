@@ -39,7 +39,7 @@ FastAPI (:8000) → Celery Worker
 ## Kurulum
 
 ```bash
-git clone https://github.com/KULLANICI/tunel.git
+git clone https://github.com/kagannhoo/tunel.git
 cd tunel
 cp .env.example .env
 docker compose up --build
@@ -73,6 +73,45 @@ cd backend && uvicorn main:app --reload
 celery -A tasks worker --loglevel=info
 cd frontend && npm install && npm run dev
 ```
+
+---
+
+## Kaynakça
+
+Bu proje aşağıdaki açık kaynak araçlar ve servisler üzerine inşa edilmiştir:
+
+### OSINT Araçları
+
+| Araç | Yazar / Kurum | Bağlantı |
+|------|---------------|----------|
+| **Sherlock** | Sherlock Project | https://github.com/sherlock-project/sherlock |
+| **WhatsMyName** | Micah Hoffman (WebBreacher) | https://github.com/WebBreacher/WhatsMyName |
+| **User-Scanner** | kaifcodec | https://github.com/kaifcodec/user-scanner |
+| **XposedOrNot** | XposedOrNot | https://xposedornot.com · https://github.com/XposedOrNot |
+
+### Altyapı & Kütüphaneler
+
+| Teknoloji | Bağlantı |
+|-----------|----------|
+| FastAPI | https://fastapi.tiangolo.com |
+| Celery | https://docs.celeryq.org |
+| React | https://react.dev |
+| PostgreSQL | https://www.postgresql.org |
+| Redis | https://redis.io |
+| Anthropic Claude *(opsiyonel AI katmanı)* | https://www.anthropic.com |
+
+### Veri Kaynakları
+
+- **Gravatar API** — https://gravatar.com
+- **Google Public DNS** — https://developers.google.com/speed/public-dns
+- **WhatsMyName JSON veritabanı** — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) lisansı altında (Micah Hoffman)
+
+### Geliştirme
+
+- **Tunel** — Kağan Haciosmanoğlu ([@kagannhoo](https://github.com/kagannhoo))
+- Proje mimarisi ve kod geliştirme sürecinde **[Cursor](https://cursor.com)** AI asistanı (Anthropic Claude) kullanılmıştır.
+
+> Bu araçlar bağımsız projelerdir; Tunel resmi olarak bunların hiçbiri tarafından onaylanmamıştır.
 
 ---
 
